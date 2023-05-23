@@ -9,7 +9,12 @@ class Bank {
   }
 
   deposit(amount) {
-    this.amount += this.money
+    return this.money += amount;
+    // doooo testing first numbskull
+  }
+
+  withdraw(amount) {
+    return this.money -= amount;
   }
 
 }
