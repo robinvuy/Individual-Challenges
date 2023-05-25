@@ -1,15 +1,17 @@
 const Bank = require('./bank');
+const Deposit = require('./deposit');
 
 describe ('bank', () => {
-  it("return 0", () => {
+  it("return empty array", () => {
   const account = new Bank;
-  expect(account.display()).toContain(0);
+  expect(account.display()).toEqual([]);
   });
 
   it("returns 10", () => {
     const account = new Bank;
-    account.deposit(10);
-    expect(account.display()).toContain(10);
+
+    account.deposit(10, "01/01/2023");
+    expect(account.display()).toContain("01/01/2023 || 10");
   });
 
   it("returns 5", () =>{
