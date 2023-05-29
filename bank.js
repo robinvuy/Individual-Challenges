@@ -1,12 +1,10 @@
 class Bank {
   constructor() { 
   this.money = 0;
-  // this.date = [];
   this.transactions = [];
   }
 
   display() {
-    
   console.log("date || credit || debit || balance"); 
   let balance = this.money;
   const reversedTransactions = this.transactions.slice().reverse();
@@ -25,7 +23,6 @@ class Bank {
   
   deposit(amount, date) {
     this.money += amount;
-    // this.date.push(date);
     const transaction = { date: date, amount: amount, type: 'credit' };
     this.transactions.push(transaction);
   }
@@ -33,12 +30,9 @@ class Bank {
 
   withdraw(amount, date) {
     this.money -= amount;
-    // this.date.push(date);
     const transaction = { date: date, amount: amount, type: 'debit' };
     this.transactions.push(transaction);
-
   }
-
 };
 
 
